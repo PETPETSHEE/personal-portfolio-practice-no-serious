@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portafolio de sh1t xd">
+    <meta name="author" content="alven qiu">
+    <title>sdfg</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="white">
+            <h1 class="noselect">alven</h1>
+        </div>
+        <ul id="menu">
+            <li><a href="#" onclick="aviso()">my channel</a></li>
+            <li><a href="form.html">form</a></li>
+            <li><a href="index.html">portfolio</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" id="boton" onclick="press()"></i>
+    </nav>
+    <!--                               inicio                                         -->
+
+
+    <div class="container2">
+        <div class="calc__text">
+            <h1>simple</h1>
+            <h2>calculator</h2>
+        </div>
+
+    <form action="" method="dialog" class="calcform">
+        <input type="text" id="op1" placeholder="number">
+        <input type="text" id="op" placeholder="operation">
+        <input type="text" id="op2" placeholder="number">
+        <input type="submit" id="btn" value="CALC" onclick="calc()">
+    </form>
+        <p id="msg"></p>
+    </div>
+
+
+<footer>
+    <p>js code by deivchoi. en el proceso se me olvido la sintax xd
+    </p>
+</footer>
+
+    <!--                               fin                                           -->
+<script src="https://kit.fontawesome.com/9c97d68d25.js" crossorigin="anonymous"></script>
+<script>
+let menu = document.getElementById('menu');
+function press() {
+    menu.classList.toggle('show')};
+
+    function aviso() {
+
+    let cosita = confirm('te iras a yt mi rey');
+    if (cosita == true) {
+        window.open('https://www.youtube.com/@alvenqz', '_blank');
+    } 
+}
+
+    //                                 calc                                           //
+
+    const $op1 = document.getElementById('op1');
+    const $op = document.getElementById('op');
+    const $op2 = document.getElementById('op2');
+    const $btn = document.getElementById('btn');
+    const $msg = document.getElementById('msg');
+
+
+function calc() {
+
+    const op1 = parseFloat($op1.value);
+    const op = $op.value;
+    const op2 = parseFloat($op2.value);
+    
+    if (op == "+"  || op == "-"  || op == "*" || op ==  "/") {
+        let result;
+        switch (op) {
+                case "+":
+                result = op1 + op2;
+                break;
+
+                case "-":
+                result = op1 - op2;
+                break;
+
+                case "*":
+                result = op1 * op2;
+                break;
+
+                case "/":
+                result = op1 / op2;
+                break;
+        }
+        $msg.innerText = "=" + result;
+        $msg.style = "color: black; font-size: 1.5rem;]"
+    } 
+    else {
+        $msg.innerText = "cannot calc";
+        $msg.style = "color: red"
+    }
+}
+</script>
+</body>
+</html>
