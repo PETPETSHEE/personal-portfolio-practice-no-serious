@@ -2,8 +2,9 @@
 
 <script src="https://kit.fontawesome.com/9c97d68d25.js" crossorigin="anonymous"></script>
 
-fa-solid fa-bars
-fa-check-circle
+ fas fa-solid fa-bars
+fas fa-times-circle
+fas fa-check-circle
 
 background: linear-gradient(180deg, #3dcaf5, #ceecf5);
 //                                                             //
@@ -173,7 +174,7 @@ $formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const $terminos = document.getElementById("terminos");
-    if(campos.usuario && $terminos.checked) {
+    if(campos.usuario && campos.contrasena && $terminos.checked) {
         // formulario.reset();
 
         document.getElementById("formulario__mensaje-exito").classList.add("formulario__mensaje-exito-activo");
